@@ -1,5 +1,5 @@
-local image_dir = './bev_pred'
-local out_dir = './features_predict_bev'
+local image_dir = './images'
+local out_dir = './features'
 local prototxt = 'VGG_ILSVRC_16_layers_deploy.prototxt'
 local caffemodel = 'VGG_ILSVRC_16_layers.caffemodel'
 local layer_to_extract = 37 -- 39=fc8, 37=fc7, 31=pool5
