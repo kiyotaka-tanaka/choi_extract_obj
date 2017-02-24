@@ -1,3 +1,8 @@
+REQUIREMENTS:
+ python2.7  
+ torch7(image,cutorch,nn,cudnn,loadcaffe,paths,image,hdf5,xlua)
+
+
 必要なファイル：
 
 　 VGG_ILSVRC_16_layers.caffemodel 　VGG-16ネットワークをImageNetの1000類画像で学習されたモデルです。
