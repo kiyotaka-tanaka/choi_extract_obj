@@ -1,5 +1,7 @@
 REQUIREMENTS:
+
  python2.7  
+ 
  torch7(image,cutorch,nn,cudnn,loadcaffe,paths,image,hdf5,xlua)
 
 
