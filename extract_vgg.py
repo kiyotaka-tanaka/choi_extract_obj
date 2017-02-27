@@ -1,7 +1,9 @@
 import numpy as np 
 
-import sys 
-sys.path.append("/root/caffe/python")
+import sys
+#### Yourt path to caffe ########################
+caffe_python_path = "/root/caffe/python" 
+sys.path.append(caffe_python_path)
 import caffe
 import argparse
 
