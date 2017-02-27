@@ -9,7 +9,7 @@ REQUIREMENTS:
 
 　 VGG_ILSVRC_16_layers.caffemodel 　VGG-16ネットワークをImageNetの1000類画像で学習されたモデルです。
    
-   wget http://www.robots.ox.ac.uk/~vgg/software/very_deep/caffe/VGG_ILSVRC_16_layers.caffemodel　でダウンロード。
+   to download model   wget http://www.robots.ox.ac.uk/~vgg/software/very_deep/caffe/VGG_ILSVRC_16_layers.caffemodel　
   
   
   VGG_ILSVRC_16_layers_deploy.prototxt VGG ネットワークの　caffe　様な定義ファイルです。
