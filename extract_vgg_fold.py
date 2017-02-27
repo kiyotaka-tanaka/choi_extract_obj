@@ -17,7 +17,7 @@ parser.add_argument("--image_folder",help = "path to image",type = str,default =
 parser.add_argument("--with_fileName",help = "include imagename to feature if 1", default = 0)
 parser.add_argument("--output_file",help = "writing features to this file",type = str,default = "out.txt")
 parser.add_argument("--extract_layer",help = "layer's name that extract features from",type = str,default = "fc6")
-
+parser.add_argument("--label", help = "label for your data ", type =str , default = "0\t1")
 
 args = parser.parse_args()
 
@@ -28,9 +28,9 @@ images = os.listdir(args.image_folder)
 file1 = open(args.output_file,"w")
 
 def array2txt(array):
-    line = ""
+    line = args.label
     for i in array:
-        line =line + str(i) + "\t"
+        line =line + "\t" +str(i) 
         
     return line
 
@@ -45,7 +45,7 @@ for image in images:
         #features = np.resize(features,(1,len(features)))
 
         line = array2txt(np.array(features))
-        print line
+        #print line
         if args.with_fileName:
             line = path_to_img + "\t" + line
         file1.write(line)
