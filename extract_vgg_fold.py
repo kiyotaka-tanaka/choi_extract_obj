@@ -27,6 +27,15 @@ images = os.listdir(args.image_folder)
 
 file1 = open(args.output_file,"w")
 
+def resizeArray(array):
+    shape1 = array.shape
+    l = 1
+    for i in shape1:
+        l = l*i
+
+    array = np.reshape(array,[l])
+    return array
+
 def array2txt(array):
     line = args.label
     for i in array:
@@ -43,7 +52,7 @@ for image in images:
         features = vgg.extract_feature(img,blob = args.extract_layer)
         
         #features = np.resize(features,(1,len(features)))
-
+        features = resizeArray(features)
         line = array2txt(np.array(features))
         #print line
         if args.with_fileName:
@@ -51,7 +60,7 @@ for image in images:
         file1.write(line)
         file1.write("\n")
 
-        
+        print features.shape
 
 file1.close()
 
