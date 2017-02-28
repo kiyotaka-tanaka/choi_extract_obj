@@ -16,7 +16,7 @@ parser.add_argument("--deploy",help =" path to  deploy.protxt",type = str,defaul
 parser.add_argument("--image_folder",help = "path to image",type = str,default = "")
 parser.add_argument("--with_fileName",help = "include imagename to feature if 1", default = 0)
 parser.add_argument("--output_file",help = "writing features to this file",type = str,default = "out.txt")
-parser.add_argument("--extract_layer",help = "layer's name that extract features from",type = str,default = "fc6")
+parser.add_argument("--extract_layer",help = "layer's name that extract features from",type = str,default = "conv5_3")
 parser.add_argument("--label", help = "label for your data ", type =str , default = "0\t1")
 
 args = parser.parse_args()
